@@ -1,4 +1,4 @@
-package programmers.practice.basic;
+package programmers.kit.basic;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package programmers.practice.test;
+package programmers.kit.test;
 
 import java.util.Stack;
 

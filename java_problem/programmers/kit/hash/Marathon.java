@@ -1,23 +1,25 @@
-package programmers.practice.hash;
+package programmers.kit.hash;
 
 import java.util.HashMap;
 
 // 완주하지 못한 선수
 // 참여자(participant) 명단에 있지만, 완주자(completion) 명단에 없는 선수가 결과로 반환되어야 합니다.
 public class Marathon {
-	
 	public static void main(String[] args) {
 	
 		Marathon problem = new Marathon();
 
+		// 예 1)
 		String[] participant = {"leo", "kiki", "eden"};
 		String[] completion = {"eden", "kiki"};
 		System.out.println("result : " + problem.solution(participant, completion));
 
+		// 예 2)
 		participant = new String[]{"marina", "josipa", "nikola", "vinko", "filipa"};
 		completion = new String[]{"josipa", "filipa", "marina", "nikola"};
 		System.out.println("result : " + problem.solution(participant, completion));
 
+		// 예 3)
 		participant = new String[]{"mislav", "stanko", "mislav", "ana"};
 		completion = new String[]{"stanko", "ana", "mislav"};
 		System.out.println("result : " + problem.solution(participant, completion));

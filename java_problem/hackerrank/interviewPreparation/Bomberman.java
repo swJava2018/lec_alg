@@ -5,7 +5,6 @@ import static java.util.stream.Collectors.toList;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -13,8 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
-// 봄버맨 문제 (Basic)
-// 정확도 통과, 시간 타임 초과
+// Prepare > Interview > Preparation Kits > 1 Month Preparation Kit > Week 3 > The Bomberman Game
+// 수준 : Basic / 성공률 (73.95%)
+// 문제 : 봄버맨
+// 풀이 검사 : 테스트 일부 통과(정확도 통과, 시간 타임 초과)
 
 public class Bomberman {
     /*

@@ -12,7 +12,7 @@ import java.util.PriorityQueue;
 import java.util.stream.Stream;
 
 // Prepare > Interview > Preparation Kits > 1 Month Preparation Kit > Week 4 > Jesse and Cookies
-// 수준 : Intermediate / 성공률 (79.36%%)
+// 수준 : Intermediate / 성공률 (79.36%)
 // 문제 : 쿠키 쿱기
 // 풀이 검사 : 테스트 모두 통과
 

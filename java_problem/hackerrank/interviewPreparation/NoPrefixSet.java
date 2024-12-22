@@ -1,6 +1,8 @@
 package hackerrank.interviewPreparation;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -19,6 +21,48 @@ import static java.util.stream.Collectors.toList;
 
 public class NoPrefixSet {
     public static void noPrefix(List<String> words) {
+        if (words.size() == 1) {
+            System.out.println("GOOD SET");
+            return;
+        }
+
+        if (words.size() == 2 && words.get(0).equals(words.get(1))) {
+            System.out.printf("BAD SET\n%s", words.get(1));
+            return;
+        }
+
+        HashSet<String> exist = new HashSet<>();
+        exist.add(words.get(0));
+
+        for (int i=1; i<words.size(); i++) {
+            // remove duplicated word for performance
+            if (exist.contains(words.get(i))) {
+                continue;
+            } else {
+                exist.add(words.get(i));
+            }
+
+            for (int j=i-1; j>=0; j--) {
+                int prevWordLen = words.get(j).length();
+                int currWordLen = words.get(i).length();
+                if (prevWordLen < currWordLen
+                        && words.get(j).equals(words.get(i).subSequence(0, prevWordLen))) {
+                    System.out.printf("BAD SET\n%s", words.get(i));
+                    return;
+                } else if (prevWordLen > currWordLen
+                        && words.get(i).equals(words.get(j).subSequence(0, currWordLen))) {
+                    System.out.printf("BAD SET\n%s", words.get(i));
+                    return;
+                } else if (words.get(i).equals(words.get(j))) {
+                    System.out.printf("BAD SET\n%s", words.get(i));
+                    return;
+                }
+            }
+        }
+        System.out.println("GOOD SET");
+    }
+
+    /*public static void noPrefix(List<String> words) {
         if (words.size() == 1) {
             System.out.println("GOOD SET");
             return;
@@ -42,7 +86,7 @@ public class NoPrefixSet {
             }
         }
         System.out.println("GOOD SET");
-    }
+    }*/
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
